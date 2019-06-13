@@ -1,0 +1,9 @@
+export const UPDATE_VERSION = 'UPDATE_VERSION';
+export const CUT_GODMODEL = 'CUT_GODMODEL';
+export const CUT_SEARCHMODEL = 'CUT_SEARCHMODEL';
+export const SET_SPLASH_VIEW = 'SET_SPLASH_VIEW';
+export const SET_VIP_UP_MODAL = 'SET_VIP_UP_MODAL';
+
+export const SET_PHONE = 'SET_PHONE';
+export const CLEAR_PHONE = 'CLEAR_PHONE';
+export const SET_FIX_BTN_MODAL = 'SET_FIX_BTN_MODAL';

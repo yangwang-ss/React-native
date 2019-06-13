@@ -1,0 +1,7 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey"></string>
+    <string name="app_name_release">米粒生活</string>
+    <string name="app_name_staging">米粒生活测试版</string>
+    <string name="app_name_debug">米粒生活开发版</string>
+    <string name="android_auto_update_download_progress">正在下载:%1$d%%</string>
+</resources>

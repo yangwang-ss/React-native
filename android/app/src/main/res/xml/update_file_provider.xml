@@ -1,0 +1,11 @@
+<?xml version ="1.0" encoding ="utf-8"?><!--  Learn More about how to use App Actions: https://developer.android.com/guide/actions/index.html -->
+<paths>
+    <!--升级-->
+    <external-cache-path
+        name="update_external_cache"
+        path="." />
+
+    <cache-path
+        name="update_cache"
+        path="." />
+</paths>

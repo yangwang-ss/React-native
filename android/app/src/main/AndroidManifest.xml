@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" package="com.vxiaoke.ricelife.app">
+    <permission android:name="${applicationId}.permission.JPUSH_MESSAGE" android:protectionLevel="signature"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_SMS"/>
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES"/>
+    <application android:networkSecurityConfig="@xml/network_security_config" android:name="com.vxiaoke.ricelife.app.MainApplication" android:allowBackup="true" android:icon="@mipmap/ic_launcher" android:label="@string/app_name" android:theme="@style/AppTheme" android:largeHeap="true" tools:replace="android:allowBackup">
+        <provider android:name="android.support.v4.content.FileProvider" android:authorities="${applicationId}.updateFileProvider" android:exported="false" tools:replace="android:authorities" android:grantUriPermissions="true">
+            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" tools:replace="android:resource" android:resource="@xml/update_file_provider"/>
+        </provider>
+        <service android:name="com.vxiaoke.ricelife.app.upgrade.DownloadService" android:exported="true"/>
+        <activity android:name="com.vxiaoke.ricelife.app.MainActivity" android:label="@string/app_name" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:launchMode="singleTask" android:screenOrientation="portrait" android:maxAspectRatio="2.4" android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data android:host="m.vxiaoke360.com" android:scheme="mili"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.ali.auth.third.ui.LoginActivity" android:theme="@style/AlibcLoginTheme" tools:replace="android:theme"/>
+        <activity android:name="com.facebook.react.devsupport.DevSettingsActivity"/>
+        <activity android:name="com.vxiaoke.ricelife.app.wxapi.WXEntryActivity" android:exported="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <activity android:name="com.vxiaoke.ricelife.app.wxapi.WXPayEntryActivity" android:exported="true" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+        <meta-data android:name="android.notch_support" android:value="true"/>
+        <meta-data android:name="JPUSH_APPKEY" android:value="${JPUSH_APPKEY}"/>
+        <meta-data android:name="JPUSH_CHANNEL" android:value="${APP_CHANNEL}"/>
+        <meta-data android:name="com.google.android.actions" android:resource="@xml/update_file_provider"/>
+    </application>
+</manifest>
