@@ -41,7 +41,7 @@
     "react-native-charts-wrapper": "^0.5.1",
     "react-native-code-push": "^5.6.0",
     "react-native-device-info": "^0.24.3",
-    "react-native-fast-image": "^5.2.0",
+    "react-native-fast-image": "^8.3.0",
     "react-native-fit-image": "^1.5.4",
     "react-native-fs": "^2.13.3",
     "react-native-gesture-handler": "^1.0.12",
